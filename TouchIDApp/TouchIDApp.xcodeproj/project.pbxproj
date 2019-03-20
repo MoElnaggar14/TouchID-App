@@ -12,6 +12,7 @@
 		A5D101FF2242F45A00BBE783 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5D101FD2242F45A00BBE783 /* Main.storyboard */; };
 		A5D102012242F45D00BBE783 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5D102002242F45D00BBE783 /* Assets.xcassets */; };
 		A5D102042242F45D00BBE783 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5D102022242F45D00BBE783 /* LaunchScreen.storyboard */; };
+		A5D1020C2242FE0C00BBE783 /* UIDevice+ModelName.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5D1020B2242FE0C00BBE783 /* UIDevice+ModelName.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		A5D102002242F45D00BBE783 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A5D102032242F45D00BBE783 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A5D102052242F45D00BBE783 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A5D1020B2242FE0C00BBE783 /* UIDevice+ModelName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDevice+ModelName.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +57,7 @@
 			isa = PBXGroup;
 			children = (
 				A5D101F92242F45A00BBE783 /* AppDelegate.swift */,
+				A5D1020B2242FE0C00BBE783 /* UIDevice+ModelName.swift */,
 				A5D101FB2242F45A00BBE783 /* AuthenticationViewController.swift */,
 				A5D101FD2242F45A00BBE783 /* Main.storyboard */,
 				A5D102002242F45D00BBE783 /* Assets.xcassets */,
@@ -136,6 +139,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A5D101FC2242F45A00BBE783 /* AuthenticationViewController.swift in Sources */,
+				A5D1020C2242FE0C00BBE783 /* UIDevice+ModelName.swift in Sources */,
 				A5D101FA2242F45A00BBE783 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
