@@ -13,6 +13,8 @@
 		A5D102012242F45D00BBE783 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5D102002242F45D00BBE783 /* Assets.xcassets */; };
 		A5D102042242F45D00BBE783 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5D102022242F45D00BBE783 /* LaunchScreen.storyboard */; };
 		A5D1020C2242FE0C00BBE783 /* UIDevice+ModelName.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5D1020B2242FE0C00BBE783 /* UIDevice+ModelName.swift */; };
+		A5D1020E224306E200BBE783 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5D1020D224306E200BBE783 /* HomeViewController.swift */; };
+		A5D102132243076B00BBE783 /* LocalAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5D102122243076B00BBE783 /* LocalAuthentication.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		A5D102032242F45D00BBE783 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A5D102052242F45D00BBE783 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A5D1020B2242FE0C00BBE783 /* UIDevice+ModelName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDevice+ModelName.swift"; sourceTree = "<group>"; };
+		A5D1020D224306E200BBE783 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		A5D102122243076B00BBE783 /* LocalAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LocalAuthentication.framework; path = System/Library/Frameworks/LocalAuthentication.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5D102132243076B00BBE783 /* LocalAuthentication.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +47,7 @@
 			children = (
 				A5D101F82242F45A00BBE783 /* TouchIDApp */,
 				A5D101F72242F45A00BBE783 /* Products */,
+				A5D102112243076B00BBE783 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -57,14 +63,39 @@
 			isa = PBXGroup;
 			children = (
 				A5D101F92242F45A00BBE783 /* AppDelegate.swift */,
-				A5D1020B2242FE0C00BBE783 /* UIDevice+ModelName.swift */,
-				A5D101FB2242F45A00BBE783 /* AuthenticationViewController.swift */,
+				A5D1020F224306E800BBE783 /* Extensions */,
+				A5D10210224306F500BBE783 /* ViewControllers */,
 				A5D101FD2242F45A00BBE783 /* Main.storyboard */,
 				A5D102002242F45D00BBE783 /* Assets.xcassets */,
 				A5D102022242F45D00BBE783 /* LaunchScreen.storyboard */,
 				A5D102052242F45D00BBE783 /* Info.plist */,
 			);
 			path = TouchIDApp;
+			sourceTree = "<group>";
+		};
+		A5D1020F224306E800BBE783 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A5D1020B2242FE0C00BBE783 /* UIDevice+ModelName.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		A5D10210224306F500BBE783 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				A5D101FB2242F45A00BBE783 /* AuthenticationViewController.swift */,
+				A5D1020D224306E200BBE783 /* HomeViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		A5D102112243076B00BBE783 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A5D102122243076B00BBE783 /* LocalAuthentication.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,6 +172,7 @@
 				A5D101FC2242F45A00BBE783 /* AuthenticationViewController.swift in Sources */,
 				A5D1020C2242FE0C00BBE783 /* UIDevice+ModelName.swift in Sources */,
 				A5D101FA2242F45A00BBE783 /* AppDelegate.swift in Sources */,
+				A5D1020E224306E200BBE783 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,7 +328,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.moelnaggar.TouchIDApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -314,7 +346,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.moelnaggar.TouchIDApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

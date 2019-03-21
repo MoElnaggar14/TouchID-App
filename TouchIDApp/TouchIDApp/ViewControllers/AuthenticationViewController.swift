@@ -13,6 +13,9 @@ class AuthenticationViewController: UIViewController {
 
     @IBOutlet weak var loginButton: UIButton!
     
+    let context = LAContext()
+    var authError: NSError?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
@@ -27,13 +30,29 @@ class AuthenticationViewController: UIViewController {
         default:
             loginButton.setTitle("Lohin Using PassCode", for: .normal)
         }
+        
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
     }
     
     
     @IBAction func loginButtonWasPressed(_ sender: UIButton) {
+        if #available(iOS 8.0, macOS 10.12.1, *) {
+            if context.canEvaluatePolicy(.deviceOwnerAuthentication, error: &authError) {
+                context.evaluatePolicy(.deviceOwnerAuthentication, localizedReason: loginButton.currentTitle ?? "") { [weak self](success, authError) in
+                    if success {
+                        DispatchQueue.main.async {
+                            self?.navigationController?.pushViewController(HomeViewController(), animated: true)
+                        }
+                    } else {
+                        print("show Error \(authError?.localizedDescription ?? "")")
+                    }
+                }
+            } else {
+                print("show Error \(authError?.localizedDescription ?? "")")
+            }
+        }
+        
         
     }
-
-
 }
 
